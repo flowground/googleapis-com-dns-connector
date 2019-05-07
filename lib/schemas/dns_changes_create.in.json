@@ -1,0 +1,125 @@
+{
+    "type": "object",
+    "properties": {
+        "clientOperationId": {
+            "type": "string"
+        },
+        "managedZone": {
+            "required": true,
+            "type": "string"
+        },
+        "project": {
+            "required": true,
+            "type": "string"
+        },
+        "oauth_token": {
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "additions": {
+                    "items": {
+                        "properties": {
+                            "kind": {
+                                "default": "dns#resourceRecordSet",
+                                "description": "Identifies what kind of resource this is. Value: the fixed string \"dns#resourceRecordSet\".",
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "rrdatas": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "signatureRrdatas": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "ttl": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "deletions": {
+                    "items": {
+                        "properties": {
+                            "kind": {
+                                "default": "dns#resourceRecordSet",
+                                "description": "Identifies what kind of resource this is. Value: the fixed string \"dns#resourceRecordSet\".",
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "rrdatas": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "signatureRrdatas": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            "ttl": {
+                                "format": "int32",
+                                "type": "integer"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "isServing": {
+                    "type": "boolean"
+                },
+                "kind": {
+                    "default": "dns#change",
+                    "description": "Identifies what kind of resource this is. Value: the fixed string \"dns#change\".",
+                    "type": "string"
+                },
+                "startTime": {
+                    "type": "string"
+                },
+                "status": {
+                    "enum": [
+                        "done",
+                        "pending"
+                    ],
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

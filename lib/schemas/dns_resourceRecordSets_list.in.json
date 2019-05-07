@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "managedZone": {
+            "required": true,
+            "type": "string"
+        },
+        "maxResults": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "pageToken": {
+            "type": "string"
+        },
+        "project": {
+            "required": true,
+            "type": "string"
+        },
+        "type": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "changeId": {
+            "required": true,
+            "type": "string"
+        },
+        "clientOperationId": {
+            "type": "string"
+        },
+        "managedZone": {
+            "required": true,
+            "type": "string"
+        },
+        "project": {
+            "required": true,
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

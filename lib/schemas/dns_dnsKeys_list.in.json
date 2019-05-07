@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "digestType": {
+            "type": "string"
+        },
+        "managedZone": {
+            "required": true,
+            "type": "string"
+        },
+        "maxResults": {
+            "type": "integer"
+        },
+        "pageToken": {
+            "type": "string"
+        },
+        "project": {
+            "required": true,
+            "type": "string"
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

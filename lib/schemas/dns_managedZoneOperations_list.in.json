@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "managedZone": {
+            "required": true,
+            "type": "string"
+        },
+        "maxResults": {
+            "type": "integer"
+        },
+        "pageToken": {
+            "type": "string"
+        },
+        "project": {
+            "required": true,
+            "type": "string"
+        },
+        "sortBy": {
+            "type": "string",
+            "enum": [
+                "id",
+                "startTime"
+            ],
+            "default": "startTime"
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

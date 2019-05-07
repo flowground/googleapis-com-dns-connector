@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "clientOperationId": {
+            "type": "string"
+        },
+        "digestType": {
+            "type": "string"
+        },
+        "dnsKeyId": {
+            "required": true,
+            "type": "string"
+        },
+        "managedZone": {
+            "required": true,
+            "type": "string"
+        },
+        "project": {
+            "required": true,
+            "type": "string"
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        }
+    }
+}

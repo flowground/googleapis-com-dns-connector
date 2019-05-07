@@ -1,0 +1,161 @@
+{
+    "type": "object",
+    "properties": {
+        "clientOperationId": {
+            "type": "string"
+        },
+        "project": {
+            "required": true,
+            "type": "string"
+        },
+        "key": {
+            "type": "string"
+        },
+        "oauth_token": {
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "creationTime": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "dnsName": {
+                    "type": "string"
+                },
+                "dnssecConfig": {
+                    "properties": {
+                        "defaultKeySpecs": {
+                            "items": {
+                                "properties": {
+                                    "algorithm": {
+                                        "enum": [
+                                            "ecdsap256sha256",
+                                            "ecdsap384sha384",
+                                            "rsasha1",
+                                            "rsasha256",
+                                            "rsasha512"
+                                        ],
+                                        "type": "string"
+                                    },
+                                    "keyLength": {
+                                        "format": "uint32",
+                                        "type": "integer"
+                                    },
+                                    "keyType": {
+                                        "enum": [
+                                            "keySigning",
+                                            "zoneSigning"
+                                        ],
+                                        "type": "string"
+                                    },
+                                    "kind": {
+                                        "default": "dns#dnsKeySpec",
+                                        "description": "Identifies what kind of resource this is. Value: the fixed string \"dns#dnsKeySpec\".",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "kind": {
+                            "default": "dns#managedZoneDnsSecConfig",
+                            "description": "Identifies what kind of resource this is. Value: the fixed string \"dns#managedZoneDnsSecConfig\".",
+                            "type": "string"
+                        },
+                        "nonExistence": {
+                            "enum": [
+                                "nsec",
+                                "nsec3"
+                            ],
+                            "type": "string"
+                        },
+                        "state": {
+                            "enum": [
+                                "off",
+                                "on",
+                                "transfer"
+                            ],
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "id": {
+                    "format": "uint64",
+                    "type": "string"
+                },
+                "kind": {
+                    "default": "dns#managedZone",
+                    "description": "Identifies what kind of resource this is. Value: the fixed string \"dns#managedZone\".",
+                    "type": "string"
+                },
+                "labels": {
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "type": "object"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "nameServerSet": {
+                    "type": "string"
+                },
+                "nameServers": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "privateVisibilityConfig": {
+                    "properties": {
+                        "kind": {
+                            "default": "dns#managedZonePrivateVisibilityConfig",
+                            "description": "Identifies what kind of resource this is. Value: the fixed string \"dns#managedZonePrivateVisibilityConfig\".",
+                            "type": "string"
+                        },
+                        "networks": {
+                            "items": {
+                                "properties": {
+                                    "kind": {
+                                        "default": "dns#managedZonePrivateVisibilityConfigNetwork",
+                                        "description": "Identifies what kind of resource this is. Value: the fixed string \"dns#managedZonePrivateVisibilityConfigNetwork\".",
+                                        "type": "string"
+                                    },
+                                    "networkUrl": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object"
+                },
+                "visibility": {
+                    "enum": [
+                        "private",
+                        "public"
+                    ],
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}
